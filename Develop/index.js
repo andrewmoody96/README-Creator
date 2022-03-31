@@ -6,29 +6,34 @@ const inquirer = require("inquirer");
 const questions = [
   {
     type: "input",
-    message: "What is the title of your application?",
-    name: "Title",
+    message: "What is the title of your app?",
+    name: "title",
   },
   {
     type: "input",
-    message: "Please describe your application.",
-    name: "Description",
+    message: "Please describe your app.",
+    name: "description",
   },
   {
     type: "input",
-    message: "Installation: How do you install the application?",
-    name: "Installation",
+    message: "Installation: How do you install the app?",
+    name: "installation",
   },
   { type: "input", message: "Usage: How do you use it?", name: "Usage" },
   {
     type: "input",
     message: "Contributing: How can other users contribute to this project?",
-    name: "Contributing",
+    name: "contributing",
   },
   {
     type: "input",
-    message: "Tests: How can users test your application?",
-    name: "Questions",
+    message: "Tests: How can users test your app?",
+    name: "tests",
+  },
+  {
+    type: "input",
+    message: "Questions: How can users ask you about your app?",
+    name: "questions",
   },
 ];
 
