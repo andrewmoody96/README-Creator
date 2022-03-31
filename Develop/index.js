@@ -14,9 +14,9 @@ inquirer
       // Something else went wrong
     }
   });
-  
+
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = ['Title: What is the title of your application?', 'Description: Please describe your application.', 'Installation: How do you install the application', 'Usage: How do you use it?', 'Contributing: How can other users contribute to this project?', 'Tests: How can users test your application?'];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
