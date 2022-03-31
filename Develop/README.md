@@ -10,12 +10,12 @@ Arcu dui vivamus arcu felis bibendum ut tristique et. Laoreet suspendisse interd
 ---
 ## Table of Contents
 
-* [Installation](##Installation)
-* Usage
-* License
-* Contributing
-* Tests
-* Questions
+* [Installation](https://github.com/andrewmoody96/README-Creator/tree/main/Develop#installation)
+* [Usage](https://github.com/andrewmoody96/README-Creator/tree/main/Develop#usage)
+* [License](https://github.com/andrewmoody96/README-Creator/tree/main/Develop#license)
+* [Contributing](https://github.com/andrewmoody96/README-Creator/tree/main/Develop#contributing)
+* [Tests](https://github.com/andrewmoody96/README-Creator/tree/main/Develop#tests)
+* [Questions](https://github.com/andrewmoody96/README-Creator/tree/main/Develop#questions)
 
 asdf;lkajs;dlfkja;sldkfja;lsdkf
 asdfasdf
