@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
+const fs = require("fs");
 
 
 // TODO: Create an array of questions for user input
@@ -39,11 +40,13 @@ const questions = [
 
 // Currently logs the user's answers as JSON object.
 // Pass the answer text into the next portion of the application.
-inquirer
-  .prompt(questions)
-  .then((answers) => {
-    console.log(answers);
-  });
+const askQuestions = () => {
+    inquirer
+      .prompt(questions)
+      .then((answers) => {
+        console.log(answers);
+      });
+}
 
 
 
@@ -51,9 +54,8 @@ inquirer
 
 // Currently generates a README with a string literal. This string literal is mostly markdown with placeholder input variable names.
 function writeToFile(fileName, data) {
-  const fs = require("fs");
 
-  const content = `# USER TITLE
+const content = `# USER TITLE
 ---
 
 ## ${userDescription}
@@ -117,10 +119,13 @@ ${userQuestions}
   );
 }
 
-// writeToFile();
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    askQuestions();
+    // writeToFile();
+
+}
 
 // Function call to initialize app
 init();

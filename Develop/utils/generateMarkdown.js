@@ -17,4 +17,5 @@ function generateMarkdown(data) {
 `;
 }
 
+// Gets this info to the index.
 module.exports = generateMarkdown;
