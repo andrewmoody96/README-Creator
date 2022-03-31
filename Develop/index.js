@@ -32,6 +32,8 @@ const questions = [
   },
 ];
 
+// Currently logs the user's answers as JSON object.
+// Pass the answer text into the next portion of the application.
 inquirer
   .prompt(questions)
   .then((answers) => {
