@@ -1,3 +1,5 @@
+
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -12,28 +14,27 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const userInput = require('../index.js')
-  let mdData = `# ${answers.title}
+  let mdData = `# ${data.title}
   ---
 
   ## Description
   
-  ${answers.description}
+  ${data.description}
   
   ---
   ## Table of Contents
   
-  ${userTOC}
+  TABLE OF CONTENTS HERE
   
   ---
   ## Installation
   
-  ${answers.installation}
+  ${data.installation}
   
   ---
   ## Usage
   
-  ${answers.usage}
+  ${data.usage}
   
   ---
   ## License
@@ -43,23 +44,23 @@ function generateMarkdown(data) {
   ---
   ## Contribution
   
-  ${answers.contributing}
+  ${data.contributing}
   
   ---
   ## TESTS
   
-  ${answers.tests}
+  ${data.tests}
   
   ---
   ## Questions
   
-  ${answers.questions}
+  ${data.questions}
   
   <br>
   <br>
   
   ---`;
-  console.log("")
+  console.log(mdData)
   return mdData;
 }
 
