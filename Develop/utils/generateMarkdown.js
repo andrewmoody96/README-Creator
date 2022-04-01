@@ -12,9 +12,55 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  const userInput = require('../index.js')
+  let mdData = `# ${answers.title}
+  ---
 
-`;
+  ## Description
+  
+  ${answers.description}
+  
+  ---
+  ## Table of Contents
+  
+  ${userTOC}
+  
+  ---
+  ## Installation
+  
+  ${answers.installation}
+  
+  ---
+  ## Usage
+  
+  ${answers.usage}
+  
+  ---
+  ## License
+  
+  LICENSE INFO HERE
+  
+  ---
+  ## Contribution
+  
+  ${answers.contributing}
+  
+  ---
+  ## TESTS
+  
+  ${answers.tests}
+  
+  ---
+  ## Questions
+  
+  ${answers.questions}
+  
+  <br>
+  <br>
+  
+  ---`;
+  console.log("")
+  return mdData;
 }
 
 // Gets this info to the index.
