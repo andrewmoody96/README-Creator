@@ -42,7 +42,10 @@ const questions = [
 
 // TODO: Create a function to write README file
 
-// Currently generates a README with a string literal. This string literal is mostly markdown with placeholder input variable names.
+// Currently generates a README with answers. 
+// to-do:
+// 1. Add ToC
+// 2. Add License Info
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data,(err) => {
       if (err) {
