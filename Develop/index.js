@@ -76,6 +76,24 @@ const questions = [
 
   {
     type: "input",
+    name: "image1",
+    message: "Provide the relative path for your first screenshot. -- If you don't have any, enter 'none'."
+  },
+
+  {
+    type: "input",
+    name: "image2",
+    message: "Provide the relative path for your first screenshot. -- If you don't have any, enter 'none'."
+  },
+
+  {
+    type: "input",
+    name: "image3",
+    message: "Provide the relative path for your first screenshot. -- If you don't have any, enter 'none'."
+  },
+
+  {
+    type: "input",
     name: "year",
     message: "Copyright Year: Enter the project's copyright year.",
   },

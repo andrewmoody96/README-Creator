@@ -150,7 +150,7 @@ function generateMarkdown(answers) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
-  - [Tests](#tests)
+  - [Testing](#testing)
   - [Questions](#questions)
   - [License](#license)
   
@@ -163,6 +163,9 @@ function generateMarkdown(answers) {
   ## Usage
   
   ${answers.usage}
+
+  ## Images
+  ![Screenshot 1](${answers.image1})
   
   ---
   ## Contribution
@@ -170,7 +173,7 @@ function generateMarkdown(answers) {
   ${answers.contributing}
   
   ---
-  ## TESTS
+  ## Testing
   
   ${answers.tests}
   
