@@ -665,10 +665,10 @@ function renderLicenseSection(answers) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   console.log(answers.license.text);
-  renderLicenseBadge(answers);
+  licenseBadge = renderLicenseBadge(answers);
   renderLicenseLink(answers);
   let license = renderLicenseSection(answers);
-  let readme = `# ${answers.title};
+  let readme = `# ${answers.title} <br> ${licenseBadge}
   ---
 
   ## Description
