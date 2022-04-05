@@ -682,7 +682,7 @@ function generateMarkdown(answers) {
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Tests](#tests)
-  - [Contact](#contact)
+  - [Questions](#questions)
   - [License](#license)
   
   ---
@@ -706,9 +706,11 @@ function generateMarkdown(answers) {
   ${answers.tests}
   
   ---
-  ## Contact
+  ## Questions
   
   Email your questions to: ${answers.contact}
+  <br>
+  GitHub Profile: ${answers.github}
 
   ---
   ### Copyright ${answers.year}, ${answers.name}`;
