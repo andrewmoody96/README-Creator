@@ -55,7 +55,7 @@ const questions = [
       "Boost",
       "BSD 3-Clause",
       "BSD 2-Clause",
-      "Creative Commons 0",
+      "CC0",
       "Eclipse",
       "GNU GPL v3",
       "GNU GPL v2",
