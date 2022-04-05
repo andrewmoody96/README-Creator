@@ -641,6 +641,7 @@ function renderLicenseSection(answers) {
   return `<br>
   #### License
   ${renderLicenseBadge(answers)}
+  <br>
   ${renderLicenseLink(answers)}`;
 
 }
@@ -661,12 +662,12 @@ function generateMarkdown(answers) {
   ---
   ## Table of Contents
   
-  -[Installation](#installation)
-  -[Usage](#usage)
-  -[Contributing](#contributing)
-  -[Tests](#tests)
-  -[Contact](#contact)
-  -[License](#license)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Contact](#contact)
+  - [License](#license)
   
   ---
   ## Installation
