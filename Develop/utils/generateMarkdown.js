@@ -639,9 +639,9 @@ function renderLicenseSection(answers) {
 //   return licenses;
 
   return `<br>
-  #### License 
-  ${renderLicenseLink(answers)} 
-  ${renderLicenseBadge(answers)}`;
+  #### License
+  ${renderLicenseBadge(answers)}
+  ${renderLicenseLink(answers)}`;
 
 }
 
@@ -661,7 +661,12 @@ function generateMarkdown(answers) {
   ---
   ## Table of Contents
   
-  TABLE OF CONTENTS HERE
+  -[Installation](#installation)
+  -[Usage](#usage)
+  -[Contributing](#contributing)
+  -[Tests](#tests)
+  -[Contact](#contact)
+  -[License](#license)
   
   ---
   ## Installation
@@ -684,7 +689,7 @@ function generateMarkdown(answers) {
   ${answers.tests}
   
   ---
-  ## Questions & Contact
+  ## Contact
   
   Email your questions to: ${answers.contact}
 
