@@ -64,7 +64,7 @@ const questions = [
       "MIT",
       "Mozilla",
       "Unlicense",
-      "None"
+      "None",
     ],
   },
 
@@ -81,25 +81,18 @@ const questions = [
   },
 ];
 
-// Pass the answer text into the next portion of the application.
-
 // TODO: Create a function to write README file
-
-// Currently generates a README with answers.
-// to-do:
-// 1. Add ToC
-// 2. Add License Info
 function writeToFile(answers) {
-  console.log("Made it...")
+  console.log("Made it...");
   const readme = generateMarkdown(answers);
-  fileName = `${answers.title}_README.md`
+  fileName = `${answers.title}_README.md`;
   fs.writeFile(fileName, readme, (err) => {
     if (err) {
       console.error(err);
     }
-    console.log("generating README...")
-  })  
-};
+    console.log("generating README...");
+  });
+}
 
 // TODO: Create a function to initialize app
 function init() {
