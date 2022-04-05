@@ -105,7 +105,6 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(answers) {
-  console.log("Made it...");
   const readme = generateMarkdown(answers);
   fileName = `${answers.title}_README.md`;
   fs.writeFile(fileName, readme, (err) => {
@@ -120,7 +119,6 @@ function writeToFile(answers) {
 function init() {
   inquirer.prompt(questions).then((answers) => {
     writeToFile(answers);
-    console.log(answers);
   });
 }
 

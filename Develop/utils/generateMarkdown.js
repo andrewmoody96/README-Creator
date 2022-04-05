@@ -1,7 +1,6 @@
 // TODO: Create a function that text:s a license badge based on which license is passed in
 // If there is no license, text: an empty string
 function renderLicenseBadge(answers) {
-  console.log("rendering license badge...");
   switch (answers.license) {
     case "Apache":
       response =
@@ -59,14 +58,12 @@ function renderLicenseBadge(answers) {
       response = "";
       break;
   }
-  console.log(response);
   return response;
 }
 
 // TODO: Create a function that text:s the license link
 // If there is no license, text: an empty string
 function renderLicenseLink(answers) {
-  console.log("redering license link...");
   switch (answers.license) {
     case "Apache":
       response =
@@ -117,7 +114,6 @@ function renderLicenseLink(answers) {
       response = "No License";
       break;
   }
-  console.log(response);
   return response;
 }
 
@@ -136,152 +132,107 @@ function generateMarkdown(answers) {
   licenseBadge = renderLicenseBadge(answers);
   renderLicenseLink(answers);
   let license = renderLicenseSection(answers);
-  if (answers.screenshot === "Yes") {
-    let readme = `# ${answers.title} <br> ${licenseBadge}
-  ---
+  let readme = `# ${answers.title} <br> ${licenseBadge}
+---
 
-  ## Description
-  
-  ${answers.description}
-  
-  ---
-  ## Table of Contents
-  
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [Testing](#testing)
-  - [Questions](#questions)
-  - [License](#license)
-  
-  ---
-  ## Installation
-  
-  ${answers.installation}
-  
-  ---
-  ## Usage
-  
-  ${answers.usage}
+## Description
 
-  ![Screenshot](${answers.screenshot})
-  
-  ---
-  ## Contribution
-  
-  ${answers.contributing}
-  
-  ---
-  ## Testing
-  
-  ${answers.tests}
-  
-  ---
-  ## Questions
-  
-  If you have any questions, please send an email to <${answers.contact}>, or check out my [GitHub](https://github.com/${answers.github}).
+${answers.description}
 
-  ---
-  ### Copyright ${answers.year}, ${answers.name}`;
+---
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [Questions](#questions)
+- [License](#license)
+
+---
+## Installation
+
+${answers.installation}
+
+---
+## Usage
+
+${answers.usage}
+
+![Screenshot](${answers.screenshot})
+
+---
+## Contribution
+
+${answers.contributing}
+
+---
+## Testing
+
+${answers.tests}
+
+---
+## Questions
+
+If you have any questions, please send an email to <${answers.contact}>, or check out my [GitHub](https://github.com/${answers.github}).
+
+---
+### Copyright ${answers.year}, ${answers.name}`;
+  let readmeNoPic = `# ${answers.title} <br> ${licenseBadge}
+---
+
+## Description
+
+${answers.description}
+
+---
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [Questions](#questions)
+- [License](#license)
+
+---
+## Installation
+
+${answers.installation}
+
+---
+## Usage
+
+${answers.usage}
+
+---
+## Contribution
+
+${answers.contributing}
+
+---
+## Testing
+
+${answers.tests}
+
+---
+## Questions
+
+If you have any questions, please send an email to <${answers.contact}>, or check out my [GitHub](https://github.com/${answers.github}).
+
+---
+### Copyright ${answers.year}, ${answers.name}`;
+
+  if(answers.screenshotConfirm === 'Yes'){
     readme += license;
-  } else {
-    let readme = `# ${answers.title} <br> ${licenseBadge}
-  ---
-
-  ## Description
-  
-  ${answers.description}
-  
-  ---
-  ## Table of Contents
-  
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [Testing](#testing)
-  - [Questions](#questions)
-  - [License](#license)
-  
-  ---
-  ## Installation
-  
-  ${answers.installation}
-  
-  ---
-  ## Usage
-  
-  ${answers.usage}
-
-  
-  ---
-  ## Contribution
-  
-  ${answers.contributing}
-  
-  ---
-  ## Testing
-  
-  ${answers.tests}
-  
-  ---
-  ## Questions
-  
-  If you have any questions, please send an email to <${answers.contact}>, or check out my [GitHub](https://github.com/${answers.github}).
-
-  ---
-  ### Copyright ${answers.year}, ${answers.name}`;
-
-  readme += license;
+    return readme;
+  } else{
+    readmeNoPic += license;
+    return readmeNoPic;
   }
-  // let readme = `# ${answers.title} <br> ${licenseBadge}
-  // ---
 
-  // ## Description
-  
-  // ${answers.description}
-  
-  // ---
-  // ## Table of Contents
-  
-  // - [Installation](#installation)
-  // - [Usage](#usage)
-  // - [Contributing](#contributing)
-  // - [Testing](#testing)
-  // - [Questions](#questions)
-  // - [License](#license)
-  
-  // ---
-  // ## Installation
-  
-  // ${answers.installation}
-  
-  // ---
-  // ## Usage
-  
-  // ${answers.usage}
 
-  // ![Screenshot](${answers.screenshot})
-  
-  // ---
-  // ## Contribution
-  
-  // ${answers.contributing}
-  
-  // ---
-  // ## Testing
-  
-  // ${answers.tests}
-  
-  // ---
-  // ## Questions
-  
-  // If you have any questions, please send an email to <${answers.contact}>, or check out my [GitHub](https://github.com/${answers.github}).
 
-  // ---
-  // ### Copyright ${answers.year}, ${answers.name}`;
-
-  // readme += license;
-  return readme;
 }
 
 // Gets this info to the index.
