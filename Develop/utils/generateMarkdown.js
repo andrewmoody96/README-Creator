@@ -53,7 +53,55 @@ function renderLicenseBadge(answers) {
 // TODO: Create a function that text:s the license link
 // If there is no license, text: an empty string
 function renderLicenseLink(answers) {
-  
+  console.log("redering license link...")
+  switch (answers.license) {
+    case 'Apache':
+      response = '[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)'
+      break;
+    case 'Boost':
+      response = '[Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt)'
+      break;
+    case 'BSD 3-Clause':
+      response = '[BSD 3-Clause] (https://opensource.org/licenses/BSD-3-Clause)'
+      break;
+    case 'BSD 2-Clause':
+      response = '[BSD 2-Clause] (https://opensource.org/licenses/BSD-2-Clause)'
+      break;
+    case 'CC0':
+      response = '[CC0] (https://creativecommons.org/publicdomain/zero/1.0/legalcode)'
+      break;
+    case 'Eclipse':
+      response = '[Eclipse] (https://www.eclipse.org/legal/epl-2.0/)'
+      break;
+    case 'GNU GPL v3':
+      response = '[GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0)'
+      break;
+      // UPDATE LINK
+    case 'GNU GPL v2':
+      response = '[GNU GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0)'
+      break;
+    case 'GNU AGPLv3':
+      response = '[GNU AGPLv3](https://www.gnu.org/licenses/agpl-3.0)'
+      break;
+    case 'GNU LGPLv3':
+      response = '[GNU LGPLv3](https://www.gnu.org/licenses/lgpl-3.0)'
+      break;
+    case 'MIT':
+      response = '[MIT License](https://opensource.org/licenses/MIT)'
+      break;
+    case 'Mozilla':
+      response = '[Mozilla Public License 2.0)](https://opensource.org/licenses/MPL-2.0)'
+        break;
+    case 'Unlicense':
+      response = '[The Unlicense](http://unlicense.org/)'
+      break;
+    case 'None':
+      response = ''
+      break;
+
+  }
+  console.log(response);
+  return response;
 }
 
 // TODO: Create a function that text:s the license section of README
@@ -595,7 +643,7 @@ function renderLicenseSection(answers) {
 function generateMarkdown(answers) {
   console.log(answers.license.text);
   renderLicenseBadge(answers);
-  // renderLicenseLink(answers);
+  renderLicenseLink(answers);
   let licenseData = renderLicenseSection(answers)
   let mdData = `# ${answers.title}
   ---
