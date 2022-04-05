@@ -55,7 +55,7 @@ const questions = [
   {
     type: "list",
     name: "license",
-    message: "License: Is your projected covered under a license?",
+    message: "Is your projected covered under a license?",
     choices: [
       "Apache",
       "Boost",
@@ -75,21 +75,19 @@ const questions = [
   },
 
   {
-    type: "input",
-    name: "image1",
-    message: "Provide the relative path for your first screenshot. -- If you don't have any, enter 'none'."
+    type: "list",
+    name: "screenshotConfirm",
+    message: "Do you have a screenshot of your application?",
+    choices: ["Yes", "No"]
   },
 
   {
     type: "input",
-    name: "image2",
-    message: "Provide the relative path for your first screenshot. -- If you don't have any, enter 'none'."
-  },
-
-  {
-    type: "input",
-    name: "image3",
-    message: "Provide the relative path for your first screenshot. -- If you don't have any, enter 'none'."
+    name: "screenshot",
+    message: "Provide the relative path to your screenshot.",
+    when(answers) {
+      return answers.screenshotConfirm === "Yes"
+    }
   },
 
   {

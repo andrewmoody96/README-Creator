@@ -133,11 +133,11 @@ function renderLicenseSection(answers) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-  console.log(answers.license.text);
   licenseBadge = renderLicenseBadge(answers);
   renderLicenseLink(answers);
   let license = renderLicenseSection(answers);
-  let readme = `# ${answers.title} <br> ${licenseBadge}
+  if (answers.screenshot === "Yes") {
+    let readme = `# ${answers.title} <br> ${licenseBadge}
   ---
 
   ## Description
@@ -164,8 +164,54 @@ function generateMarkdown(answers) {
   
   ${answers.usage}
 
-  ## Images
-  ![Screenshot 1](${answers.image1})
+  ![Screenshot](${answers.screenshot})
+  
+  ---
+  ## Contribution
+  
+  ${answers.contributing}
+  
+  ---
+  ## Testing
+  
+  ${answers.tests}
+  
+  ---
+  ## Questions
+  
+  If you have any questions, please send an email to <${answers.contact}>, or check out my [GitHub](https://github.com/${answers.github}).
+
+  ---
+  ### Copyright ${answers.year}, ${answers.name}`;
+    readme += license;
+  } else {
+    let readme = `# ${answers.title} <br> ${licenseBadge}
+  ---
+
+  ## Description
+  
+  ${answers.description}
+  
+  ---
+  ## Table of Contents
+  
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Testing](#testing)
+  - [Questions](#questions)
+  - [License](#license)
+  
+  ---
+  ## Installation
+  
+  ${answers.installation}
+  
+  ---
+  ## Usage
+  
+  ${answers.usage}
+
   
   ---
   ## Contribution
@@ -186,6 +232,55 @@ function generateMarkdown(answers) {
   ### Copyright ${answers.year}, ${answers.name}`;
 
   readme += license;
+  }
+  // let readme = `# ${answers.title} <br> ${licenseBadge}
+  // ---
+
+  // ## Description
+  
+  // ${answers.description}
+  
+  // ---
+  // ## Table of Contents
+  
+  // - [Installation](#installation)
+  // - [Usage](#usage)
+  // - [Contributing](#contributing)
+  // - [Testing](#testing)
+  // - [Questions](#questions)
+  // - [License](#license)
+  
+  // ---
+  // ## Installation
+  
+  // ${answers.installation}
+  
+  // ---
+  // ## Usage
+  
+  // ${answers.usage}
+
+  // ![Screenshot](${answers.screenshot})
+  
+  // ---
+  // ## Contribution
+  
+  // ${answers.contributing}
+  
+  // ---
+  // ## Testing
+  
+  // ${answers.tests}
+  
+  // ---
+  // ## Questions
+  
+  // If you have any questions, please send an email to <${answers.contact}>, or check out my [GitHub](https://github.com/${answers.github}).
+
+  // ---
+  // ### Copyright ${answers.year}, ${answers.name}`;
+
+  // readme += license;
   return readme;
 }
 
