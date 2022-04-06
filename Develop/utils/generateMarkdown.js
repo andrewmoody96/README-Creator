@@ -144,7 +144,7 @@ ${answers.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Contribution](#contribution)
 - [Testing](#testing)
 - [Questions](#questions)
 - [License](#license)
@@ -190,7 +190,7 @@ ${answers.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Contribution](#contribution)
 - [Testing](#testing)
 - [Questions](#questions)
 - [License](#license)
