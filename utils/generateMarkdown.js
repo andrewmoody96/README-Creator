@@ -144,7 +144,7 @@ ${answers.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contribution](#contribution)
+- [Contributing](#contributing)
 - [Testing](#testing)
 - [Questions](#questions)
 - [License](#license)
@@ -162,7 +162,7 @@ ${answers.usage}
 ![Screenshot](${answers.screenshot})
 
 ---
-## Contribution
+## Contributing
 
 ${answers.contributing}
 
@@ -190,7 +190,7 @@ ${answers.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contribution](#contribution)
+- [Contributing](#contributing)
 - [Testing](#testing)
 - [Questions](#questions)
 - [License](#license)
@@ -206,7 +206,7 @@ ${answers.installation}
 ${answers.usage}
 
 ---
-## Contribution
+## Contributing
 
 ${answers.contributing}
 
