@@ -30,7 +30,7 @@ You will be presented with a series of questions. After you have answered all of
 [Screen Recording](https://drive.google.com/file/d/1qQtnZG5ZzKv7wuNTDW7J2t8pSIiGJGM5/view?usp=sharing)
 
 ---
-## Contribution
+## Contributing
 
 Please fork the project to continue development.
 
